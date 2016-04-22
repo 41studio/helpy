@@ -128,6 +128,10 @@ group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
+  gem 'capistrano',  '~> 3.1', require:false
+  gem 'capistrano-rails', '~> 1.1', require:false
+  gem 'capistrano-passenger', require:false
+  gem 'capistrano-bundler', '~> 1.1.2', require:false
 end
 
 group :test do
@@ -145,7 +149,4 @@ end
 group :production do
   gem 'newrelic_rpm'
   gem 'rails_12factor'
-  gem 'unicorn'
 end
-
-ruby "2.2.1"
