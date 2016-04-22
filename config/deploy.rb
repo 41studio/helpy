@@ -40,7 +40,7 @@ namespace :deploy do
       upload! StringIO.new(File.read("config/secrets.yml")), "#{shared_path}/config/secrets.yml"
       upload! StringIO.new(File.read("config/database.do.yml")), "#{shared_path}/config/database.yml"
       upload! StringIO.new(File.read("config/settings.yml")), "#{shared_path}/config/settings.yml"
-      upload! StringIO.new(File.read("config/cloudinary.example.yml")), "#{shared_path}/config/cloudinary.yml"
+      upload! StringIO.new(File.read("config/cloudinary.sample.yml")), "#{shared_path}/config/cloudinary.yml"
     end
   end
 
@@ -48,7 +48,7 @@ namespace :deploy do
     on roles(:app) do
       within "#{current_path}" do
         with rails_env: "production" do
-          execute :rake, "rake db:seed"
+          execute :rake, "db:seed"
         end
       end
     end 

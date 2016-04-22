@@ -10,7 +10,7 @@
 user_admin = User.create!(
   name: 'Admin',
   login:'admin',
-  email: 'admin@test.com',
+  email: 'admin@teammate.id',
   password:'12345678',
   role: 'admin',
   thumbnail: 'logo.png',

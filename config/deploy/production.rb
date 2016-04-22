@@ -3,7 +3,7 @@ set :repo_url, 'git@github.com:41studio/helpy.git'
 
 set :use_sudo, false
 set :deploy_to, "/home/railsdev/helpy"
-set :branch, "master"
+set :branch, "deploy"
 set :rails_env, "production"
 
 # server-based syntax
